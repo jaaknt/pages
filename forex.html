@@ -1,129 +1,256 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-  <meta http-equiv="Content-Language" content="et">
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <title>investing-trading page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trading & Investment - Personal Collection</title>
+  <meta name="description" content="Investment and trading bookmark collection">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 
 <body>
+  <header class="header">
+    <div class="header-content">
+      <a href="index.html" class="logo">📚 Bookmarks</a>
+      
+      <div class="search-container">
+        <input 
+          type="text" 
+          class="search-input" 
+          placeholder="Search bookmarks... (Ctrl+K)"
+          aria-label="Search bookmarks"
+        >
+        <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m21 21-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+        </svg>
+      </div>
+      
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="bookmark.html" class="nav-link">Bookmarks</a>
+        <a href="forex.html" class="nav-link active">Trading</a>
+        <button class="theme-toggle" title="Toggle theme" aria-label="Toggle dark/light mode">🌙</button>
+      </nav>
+    </div>
+  </header>
 
-  <h1>investing-trading links</h1>
-  <table style="width: 100%; border-collapse: collapse;">
-    <tbody>
-      <tr>
-        <td valign="top" width="33%">
-          <h3>trading portals</h3>
-          <a href="https://www.tradingview.com/chart/F9l2wXy8">tradingview</a><br>
-          <a href="https://www.interactivebrokers.ie/en/home.php">interactive broker</a><br>
-          <a href="https://app.alpaca.markets/brokerage/dashboard/overview">alpaca markets</a><br>
-        </td>
+  <main class="main">
+    <h1 class="page-title">Investment & Trading Links</h1>
+    
+    <div class="bookmark-grid">
+      <!-- Trading Portals -->
+      <div class="category-card">
+        <div class="category-header">
+          <h3 class="category-title">
+            <span class="category-icon">📊</span>
+            Trading Portals
+          </h3>
+          <button class="collapse-btn" aria-label="Toggle category">−</button>
+        </div>
+        <div class="bookmark-list">
+          <a href="https://www.tradingview.com/chart/F9l2wXy8" class="bookmark-link" target="_blank" rel="noopener">tradingview</a>
+          <a href="https://www.interactivebrokers.ie/en/home.php" class="bookmark-link" target="_blank" rel="noopener">interactive broker</a>
+          <a href="https://app.alpaca.markets/brokerage/dashboard/overview" class="bookmark-link" target="_blank" rel="noopener">alpaca markets</a>
+        </div>
+      </div>
 
-        <td valign="top" width="33%">
-          <h3>google documents</h3>
-          <a
-            href="https://docs.google.com/spreadsheets/d/1fhBljXd9wZy2e1wOBzmTiBMr_3hzhtGikeSQHyL-de8/edit#gid=1500439569">monthly
-            report</a><br>
-          <a href="https://docs.google.com/spreadsheets/d/19kICWriWZr_2arZFw3jyzyohXQ2mB7UIewh8jQa-QBc/edit#gid=0">forex
-            info</a><br>
-        </td>
+      <!-- Google Documents -->
+      <div class="category-card">
+        <div class="category-header">
+          <h3 class="category-title">
+            <span class="category-icon">📄</span>
+            Google Documents
+          </h3>
+          <button class="collapse-btn" aria-label="Toggle category">−</button>
+        </div>
+        <div class="bookmark-list">
+          <a href="https://docs.google.com/spreadsheets/d/1fhBljXd9wZy2e1wOBzmTiBMr_3hzhtGikeSQHyL-de8/edit#gid=1500439569" class="bookmark-link" target="_blank" rel="noopener">monthly report</a>
+          <a href="https://docs.google.com/spreadsheets/d/19kICWriWZr_2arZFw3jyzyohXQ2mB7UIewh8jQa-QBc/edit#gid=0" class="bookmark-link" target="_blank" rel="noopener">forex info</a>
+        </div>
+      </div>
 
-        <td valign="top" width="33%">
-          <h3>forex info</h3>
-          <a href="http://www.cmegroup.com/trading/interest-rates/countdown-to-fomc.html">fedwatch tool</a><br>
-          <a href="http://www.tradingeconomics.com/forecast/currency">trading-economics currency forecast</a><br>
-        </td>
-      </tr>
+      <!-- Forex Info -->
+      <div class="category-card">
+        <div class="category-header">
+          <h3 class="category-title">
+            <span class="category-icon">💱</span>
+            Forex Info
+          </h3>
+          <button class="collapse-btn" aria-label="Toggle category">−</button>
+        </div>
+        <div class="bookmark-list">
+          <a href="https://www.cmegroup.com/trading/interest-rates/countdown-to-fomc.html" class="bookmark-link" target="_blank" rel="noopener">fedwatch tool</a>
+          <a href="https://www.tradingeconomics.com/forecast/currency" class="bookmark-link" target="_blank" rel="noopener">trading-economics currency forecast</a>
+        </div>
+      </div>
 
-      <tr>
-        <td valign="top" width="33%">
-          <h3>news</h3>
-          <a href="http://investingchannel.com/">investing channel</a><br>
-          <a href="http://www.forexcrunch.com/category/forex-weekly-outlook/eur-usd-outlook/">EURUSD outlook</a><br>
-          <a href="http://www.fxstreet.com/analysis/forecast-currencies-poll/">currency forecast</a><br>
-        </td>
-        <td valign="top" width="33%">
-          <h3>crowd funding</h3>
-          <a href="https://crowdestate.eu">crowdestate</a><br>
-          <a href="https://estateguru.co/investment/main">estateguru</a><br>
-          <a href="https://www.moneyzen.eu/invest">moneyzen</a><br>
-        </td>
-        <td valign="top" width="34%">
-          <h3>stocks</h3>
-          <a href="https://finance.yahoo.com/portfolio/p_3/view/v1">yahoo</a><br>
-          <a href="http://market.ee.omxgroup.com">eesti börsiinfo</a><br>
-          <a href="https://www.swedbank.ee/">swedbank</a><br>
-          <a href="https://www.lhv.ee/">lhv</a><br>
-        </td>
-      </tr>
+      <!-- News -->
+      <div class="category-card">
+        <div class="category-header">
+          <h3 class="category-title">
+            <span class="category-icon">📰</span>
+            News
+          </h3>
+          <button class="collapse-btn" aria-label="Toggle category">−</button>
+        </div>
+        <div class="bookmark-list">
+          <a href="https://investingchannel.com/" class="bookmark-link" target="_blank" rel="noopener">investing channel</a>
+          <a href="https://www.forexcrunch.com/category/forex-weekly-outlook/eur-usd-outlook/" class="bookmark-link" target="_blank" rel="noopener">EURUSD outlook</a>
+          <a href="https://www.fxstreet.com/analysis/forecast-currencies-poll/" class="bookmark-link" target="_blank" rel="noopener">currency forecast</a>
+        </div>
+      </div>
 
-      <tr>
-        <td valign="top" width="33%">
-          <h3>estonian investment blogs</h3>
-          <a
-            href="http://www.dailyfx.com/forex/education/trading_tips/daily_trading_lesson/2015/02/12/FXCM-Open-House-2015.html?DFXfeeds=forex:education:trading_tips:daily_trading_lesson">fxcm
-            tools</a><br>
-          <a href="http://moneyisyourfriend.eu/">money is your friend</a><br>
-          <a href="http://roosaare.com">jaak roosaare</a><br>
-          <a href="http://www.dividendinvestor.ee/">dividendinvestor</a><br>
-          <a href="https://tradermarkus.com/">trader markus</a><br>
-        </td>
-        <td valign="top" width="33%">
-          <h3>international sites</h3>
-          <a href="http://dailytradealert.com/">daily alert</a><br>
-          <a href="https://www.dataroma.com">dataroma</a><br>
-          <a href="http://www.morningstar.com/">morningstar</a><br>
-          <a href="https://www.theinvestorspodcast.com/">investor podcast</a><br>
-          <a href="https://docs.edgetotrade.com/guides/top-lists">edge to trade</a><br>
-          <a
-            href="https://finviz.com/screener.ashx?v=111&f=fa_sales5years_o10,fa_salesqoq_o5,geo_usa,ind_stocksonly,ipodate_prev3yrs,sh_curvol_o500,ta_sma20_pa,ta_sma200_pa,ta_sma50_pa&ft=4">finviz</a><br>
-        </td>
-        <td valign="top" width="33%">
-          <h3>forex</h3>
-          <a
-            href="https://docs.google.com/spreadsheets/d/13idCKkvUlszNroouBePqc9BHBxzPifZsRHKvf4rJcbs/edit#gid=342362908">trading
-            journal</a><br>
-          <a href="https://www.myfxbook.com">myfxbook</a><br>
-          <a href="https://www.poundsterlinglive.com">pound-sterling</a><br>
-          <a href="https://nononsenseforex.com">no-nonsense-forex</a><br>
-          <a href="https://www.barchart.com/stocks/quotes/$EVZ/interactive-chart">$EVZ</a><br>
-          <a href="https://www.tradingwithrayner.com/pte/">rayner teo</a><br>
-        </td>
-      </tr>
+      <!-- Crowdfunding -->
+      <div class="category-card">
+        <div class="category-header">
+          <h3 class="category-title">
+            <span class="category-icon">👥</span>
+            Crowd Funding
+          </h3>
+          <button class="collapse-btn" aria-label="Toggle category">−</button>
+        </div>
+        <div class="bookmark-list">
+          <a href="https://crowdestate.eu" class="bookmark-link" target="_blank" rel="noopener">crowdestate</a>
+          <a href="https://estateguru.co/investment/main" class="bookmark-link" target="_blank" rel="noopener">estateguru</a>
+          <a href="https://www.moneyzen.eu/invest" class="bookmark-link" target="_blank" rel="noopener">moneyzen</a>
+        </div>
+      </div>
 
-      <tr>
-        <td valign="top" width="33%">
-          <h3>data history</h3>
-          <a href="https://norgatedata.com/">norgate</a><br>
-          <a href="https://iexcloud.io/">iexcloud</a><br>
-          <a href="https://www.alphavantage.co">alphavantage</a><br>
-          <a href="https://www.histdata.com/download-free-forex-data/">histdata</a><br>
-          <a href="https://forexsb.com/historical-forex-data">forexsb</a><br>
+      <!-- Stocks -->
+      <div class="category-card">
+        <div class="category-header">
+          <h3 class="category-title">
+            <span class="category-icon">📈</span>
+            Stocks
+          </h3>
+          <button class="collapse-btn" aria-label="Toggle category">−</button>
+        </div>
+        <div class="bookmark-list">
+          <a href="https://finance.yahoo.com/portfolio/p_3/view/v1" class="bookmark-link" target="_blank" rel="noopener">yahoo</a>
+          <a href="https://market.ee.omxgroup.com" class="bookmark-link" target="_blank" rel="noopener">eesti börsiinfo</a>
+          <a href="https://www.swedbank.ee/" class="bookmark-link" target="_blank" rel="noopener">swedbank</a>
+          <a href="https://www.lhv.ee/" class="bookmark-link" target="_blank" rel="noopener">lhv</a>
+        </div>
+      </div>
 
-        </td>
-        <td valign="top" width="33%">
-          <h3>investment services</h3>
-          <a href="https://banyanhill.com/premium-services">ian king portfolio</a><br>
-          <a href="https://simplywall.st/dashboard">simple wallstreet</a><br>
-          <a href="https://tradingterminal.com">trading terminal</a><br>
-          <a href="https://www.financialwisdomtv.com/shop">financial wisdom</a><br>
-          <a href="https://swingtrades.onrender.com">fw breakout scanner</a><br>
-          <a href="https://scanner.financialwisdomtv.com">fw new scanner</a><br>
-          <a href="https://portal.tradingsystemsbook.com/courses/library-v2">rayner teo</a><br>
-        </td>
-        <td valign="top" width="33%">
-          <h3>bitcoin</h3>
-          <a href="https://www.kucoin.com/ucenter/signin?utm_source=NEWUSERGIFTS">kucoin</a><br>
-          <a href="https://www.pionex.com/en/trade/BTC_USDT/Bot">pionex</a><br>
-          <a href="https://www.coinbase.com/assets">coinbase</a><br>
-          <a href="https://pro.kraken.com/app/portfolio/overview">kraken</a><br>
-          <a href="https://www.coingecko.com/en">coingecko</a><br>
-          <a href="https://withdrawalfees.com/coins">withdrawal fees</a><br>
-        </td>
-      </tr>
+      <!-- Estonian Investment Blogs -->
+      <div class="category-card">
+        <div class="category-header">
+          <h3 class="category-title">
+            <span class="category-icon">🇪🇪</span>
+            Estonian Investment Blogs
+          </h3>
+          <button class="collapse-btn" aria-label="Toggle category">−</button>
+        </div>
+        <div class="bookmark-list">
+          <a href="https://www.dailyfx.com/forex/education/trading_tips/daily_trading_lesson/2015/02/12/FXCM-Open-House-2015.html?DFXfeeds=forex:education:trading_tips:daily_trading_lesson" class="bookmark-link" target="_blank" rel="noopener">fxcm tools</a>
+          <a href="https://moneyisyourfriend.eu/" class="bookmark-link" target="_blank" rel="noopener">money is your friend</a>
+          <a href="https://roosaare.com" class="bookmark-link" target="_blank" rel="noopener">jaak roosaare</a>
+          <a href="https://www.dividendinvestor.ee/" class="bookmark-link" target="_blank" rel="noopener">dividendinvestor</a>
+          <a href="https://tradermarkus.com/" class="bookmark-link" target="_blank" rel="noopener">trader markus</a>
+        </div>
+      </div>
 
-    </tbody>
-  </table>
+      <!-- International Sites -->
+      <div class="category-card">
+        <div class="category-header">
+          <h3 class="category-title">
+            <span class="category-icon">🌍</span>
+            International Sites
+          </h3>
+          <button class="collapse-btn" aria-label="Toggle category">−</button>
+        </div>
+        <div class="bookmark-list">
+          <a href="https://dailytradealert.com/" class="bookmark-link" target="_blank" rel="noopener">daily alert</a>
+          <a href="https://www.dataroma.com" class="bookmark-link" target="_blank" rel="noopener">dataroma</a>
+          <a href="https://www.morningstar.com/" class="bookmark-link" target="_blank" rel="noopener">morningstar</a>
+          <a href="https://www.theinvestorspodcast.com/" class="bookmark-link" target="_blank" rel="noopener">investor podcast</a>
+          <a href="https://docs.edgetotrade.com/guides/top-lists" class="bookmark-link" target="_blank" rel="noopener">edge to trade</a>
+          <a href="https://finviz.com/screener.ashx?v=111&f=fa_sales5years_o10,fa_salesqoq_o5,geo_usa,ind_stocksonly,ipodate_prev3yrs,sh_curvol_o500,ta_sma20_pa,ta_sma200_pa,ta_sma50_pa&ft=4" class="bookmark-link" target="_blank" rel="noopener">finviz</a>
+        </div>
+      </div>
+
+      <!-- Forex -->
+      <div class="category-card">
+        <div class="category-header">
+          <h3 class="category-title">
+            <span class="category-icon">💸</span>
+            Forex
+          </h3>
+          <button class="collapse-btn" aria-label="Toggle category">−</button>
+        </div>
+        <div class="bookmark-list">
+          <a href="https://docs.google.com/spreadsheets/d/13idCKkvUlszNroouBePqc9BHBxzPifZsRHKvf4rJcbs/edit#gid=342362908" class="bookmark-link" target="_blank" rel="noopener">trading journal</a>
+          <a href="https://www.myfxbook.com" class="bookmark-link" target="_blank" rel="noopener">myfxbook</a>
+          <a href="https://www.poundsterlinglive.com" class="bookmark-link" target="_blank" rel="noopener">pound-sterling</a>
+          <a href="https://nononsenseforex.com" class="bookmark-link" target="_blank" rel="noopener">no-nonsense-forex</a>
+          <a href="https://www.barchart.com/stocks/quotes/$EVZ/interactive-chart" class="bookmark-link" target="_blank" rel="noopener">$EVZ</a>
+          <a href="https://www.tradingwithrayner.com/pte/" class="bookmark-link" target="_blank" rel="noopener">rayner teo</a>
+        </div>
+      </div>
+
+      <!-- Data History -->
+      <div class="category-card">
+        <div class="category-header">
+          <h3 class="category-title">
+            <span class="category-icon">📊</span>
+            Data History
+          </h3>
+          <button class="collapse-btn" aria-label="Toggle category">−</button>
+        </div>
+        <div class="bookmark-list">
+          <a href="https://norgatedata.com/" class="bookmark-link" target="_blank" rel="noopener">norgate</a>
+          <a href="https://iexcloud.io/" class="bookmark-link" target="_blank" rel="noopener">iexcloud</a>
+          <a href="https://www.alphavantage.co" class="bookmark-link" target="_blank" rel="noopener">alphavantage</a>
+          <a href="https://www.histdata.com/download-free-forex-data/" class="bookmark-link" target="_blank" rel="noopener">histdata</a>
+          <a href="https://forexsb.com/historical-forex-data" class="bookmark-link" target="_blank" rel="noopener">forexsb</a>
+        </div>
+      </div>
+
+      <!-- Investment Services -->
+      <div class="category-card">
+        <div class="category-header">
+          <h3 class="category-title">
+            <span class="category-icon">🏦</span>
+            Investment Services
+          </h3>
+          <button class="collapse-btn" aria-label="Toggle category">−</button>
+        </div>
+        <div class="bookmark-list">
+          <a href="https://banyanhill.com/premium-services" class="bookmark-link" target="_blank" rel="noopener">ian king portfolio</a>
+          <a href="https://simplywall.st/dashboard" class="bookmark-link" target="_blank" rel="noopener">simple wallstreet</a>
+          <a href="https://tradingterminal.com" class="bookmark-link" target="_blank" rel="noopener">trading terminal</a>
+          <a href="https://www.financialwisdomtv.com/shop" class="bookmark-link" target="_blank" rel="noopener">financial wisdom</a>
+          <a href="https://swingtrades.onrender.com" class="bookmark-link" target="_blank" rel="noopener">fw breakout scanner</a>
+          <a href="https://scanner.financialwisdomtv.com" class="bookmark-link" target="_blank" rel="noopener">fw new scanner</a>
+          <a href="https://portal.tradingsystemsbook.com/courses/library-v2" class="bookmark-link" target="_blank" rel="noopener">rayner teo</a>
+        </div>
+      </div>
+
+      <!-- Bitcoin -->
+      <div class="category-card">
+        <div class="category-header">
+          <h3 class="category-title">
+            <span class="category-icon">₿</span>
+            Bitcoin
+          </h3>
+          <button class="collapse-btn" aria-label="Toggle category">−</button>
+        </div>
+        <div class="bookmark-list">
+          <a href="https://www.kucoin.com/ucenter/signin?utm_source=NEWUSERGIFTS" class="bookmark-link" target="_blank" rel="noopener">kucoin</a>
+          <a href="https://www.pionex.com/en/trade/BTC_USDT/Bot" class="bookmark-link" target="_blank" rel="noopener">pionex</a>
+          <a href="https://www.coinbase.com/assets" class="bookmark-link" target="_blank" rel="noopener">coinbase</a>
+          <a href="https://pro.kraken.com/app/portfolio/overview" class="bookmark-link" target="_blank" rel="noopener">kraken</a>
+          <a href="https://www.coingecko.com/en" class="bookmark-link" target="_blank" rel="noopener">coingecko</a>
+          <a href="https://withdrawalfees.com/coins" class="bookmark-link" target="_blank" rel="noopener">withdrawal fees</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="assets/js/main.js"></script>
 
 </body>
 

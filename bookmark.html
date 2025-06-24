@@ -3,135 +3,258 @@
 
 <head>
   <meta charset="utf-8">
-  <title>koduleht</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookmarks - Personal Collection</title>
+  <meta name="description" content="Personal bookmark collection organized by categories">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 
 <body>
+  <header class="header">
+    <div class="header-content">
+      <a href="index.html" class="logo">📚 Bookmarks</a>
+      
+      <div class="search-container">
+        <input 
+          type="text" 
+          class="search-input" 
+          placeholder="Search bookmarks... (Ctrl+K)"
+          aria-label="Search bookmarks"
+        >
+        <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m21 21-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+        </svg>
+      </div>
+      
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="bookmark.html" class="nav-link active">Bookmarks</a>
+        <a href="forex.html" class="nav-link">Trading</a>
+        <button class="theme-toggle" title="Toggle theme" aria-label="Toggle dark/light mode">🌙</button>
+      </nav>
+    </div>
+  </header>
 
-  <h1>minu lemmikud</h1>
-  <table style="width: 100%; border-collapse: collapse;">
-    <tbody>
-      <tr>
-        <td style="vertical-align: top; width: 33%;">
-          <h3>eesti portaalid</h3>
-          <a href="https://www.delfi.ee/">delfi</a><br>
-          <a href="https://www.aripaev.ee/">äripäev</a><br>
-          <a href="https://www.postimees.ee/">postimees</a><br>
-          <a href="https://www.hind.ee/">hind.ee</a><br>
-          <a href="https://geenius.ee">geenius</a><br>
-        </td>
+  <main class="main">
+    <h1 class="page-title">Minu lemmikud</h1>
+    
+    <div class="bookmark-grid">
+      <!-- Estonian Portals -->
+      <div class="category-card">
+        <div class="category-header">
+          <h3 class="category-title">
+            <span class="category-icon">🇪🇪</span>
+            Eesti portaalid
+          </h3>
+          <button class="collapse-btn" aria-label="Toggle category">−</button>
+        </div>
+        <div class="bookmark-list">
+          <a href="https://www.delfi.ee/" class="bookmark-link" target="_blank" rel="noopener">delfi</a>
+          <a href="https://www.aripaev.ee/" class="bookmark-link" target="_blank" rel="noopener">äripäev</a>
+          <a href="https://www.postimees.ee/" class="bookmark-link" target="_blank" rel="noopener">postimees</a>
+          <a href="https://www.hind.ee/" class="bookmark-link" target="_blank" rel="noopener">hind.ee</a>
+          <a href="https://geenius.ee" class="bookmark-link" target="_blank" rel="noopener">geenius</a>
+        </div>
+      </div>
 
-        <td style="vertical-align: top; width: 33%;">
-          <h3>e-rakendused</h3>
-          <a href="http://www.amazon.com/">amazon us</a><br>
-          <a href="http://www.amazon.de">amazon de</a><br>
-          <a href="http://www.swedbank.ee/">swedbank</a><br>
-          <a href="https://maps.google.com/">google maps</a><br>
-          <a href="https://www.youtube.com">youtube</a><br>
-        </td>
+      <!-- E-Applications -->
+      <div class="category-card">
+        <div class="category-header">
+          <h3 class="category-title">
+            <span class="category-icon">🛒</span>
+            E-rakendused
+          </h3>
+          <button class="collapse-btn" aria-label="Toggle category">−</button>
+        </div>
+        <div class="bookmark-list">
+          <a href="https://www.amazon.com/" class="bookmark-link" target="_blank" rel="noopener">amazon us</a>
+          <a href="https://www.amazon.de" class="bookmark-link" target="_blank" rel="noopener">amazon de</a>
+          <a href="https://www.swedbank.ee/" class="bookmark-link" target="_blank" rel="noopener">swedbank</a>
+          <a href="https://maps.google.com/" class="bookmark-link" target="_blank" rel="noopener">google maps</a>
+          <a href="https://www.youtube.com" class="bookmark-link" target="_blank" rel="noopener">youtube</a>
+        </div>
+      </div>
 
-        <td style="vertical-align: top; width: 33%;">
-          <h3>sport</h3>
-          <a href="http://www.jalgpall.ee/">jalgpall</a><br>
-          <a href="http://www.chessgames.com/">chessgames</a><br>
-          <a href="https://connect.garmin.com/modern/daily-summary">garmin connect</a><br>
-        </td>
-      </tr>
+      <!-- Sport -->
+      <div class="category-card">
+        <div class="category-header">
+          <h3 class="category-title">
+            <span class="category-icon">⚽</span>
+            Sport
+          </h3>
+          <button class="collapse-btn" aria-label="Toggle category">−</button>
+        </div>
+        <div class="bookmark-list">
+          <a href="https://www.jalgpall.ee/" class="bookmark-link" target="_blank" rel="noopener">jalgpall</a>
+          <a href="https://www.chessgames.com/" class="bookmark-link" target="_blank" rel="noopener">chessgames</a>
+          <a href="https://connect.garmin.com/modern/daily-summary" class="bookmark-link" target="_blank" rel="noopener">garmin connect</a>
+        </div>
+      </div>
 
-      <tr>
-        <td style="vertical-align: top; width: 33%;">
-          <h3>e-post, kalender</h3>
-          <a href="http://www.gmail.com/">minu gmail</a><br>
-          <a href="http://www.google.com/calendar/render">minu kalender</a><br>
-          <a href="http://192.168.1.1/">inteno</a><br>
-        </td>
-        <td style="vertical-align: top; width: 34%;">
-          <h3>sotsiaalvõrgud</h3>
-          <a href="http://www.geni.com/">geni</a><br>
-          <a href="https://twitter.com/">twitter</a><br>
-          <a href="https://www.youtube.com/">youtube</a><br>
-          <a href="https://www.facebook.com/">facebook</a><br>
-        </td>
-        <td style="vertical-align: top; width: 34%;">
-          <h3>ühistu</h3>
-          <a href="https://rakendus.korteriyhistu.net/index.php?screen=sisenemine.sisenemine">korteriyhistu.net</a><br>
-          <a href="https://klient.tallinnavesi.ee/Authentication/LogOn?logOff=True">tallinna vesi</a><br>
-          <a href="https://ettevotjaportaal.rik.ee">ettevõtjaportaal</a><br>
-        </td>
-      </tr>
+      <!-- Email & Calendar -->
+      <div class="category-card">
+        <div class="category-header">
+          <h3 class="category-title">
+            <span class="category-icon">📧</span>
+            E-post, kalender
+          </h3>
+          <button class="collapse-btn" aria-label="Toggle category">−</button>
+        </div>
+        <div class="bookmark-list">
+          <a href="https://www.gmail.com/" class="bookmark-link" target="_blank" rel="noopener">minu gmail</a>
+          <a href="https://www.google.com/calendar/render" class="bookmark-link" target="_blank" rel="noopener">minu kalender</a>
+          <a href="http://192.168.1.1/" class="bookmark-link" target="_blank" rel="noopener">inteno</a>
+        </div>
+      </div>
 
-      <tr>
-        <td style="vertical-align: top; width: 33%;">
-          <h3>töö</h3>
-          <a href="https://riigihanked.riik.ee/rhr-web/#/">riigihanked</a><br>
-          <a href="https://www.checkout.com/careers/?location=Tallinn">checkout.com</a><br>
-          <a href="https://wise.jobs/jobs?options=300&page=1&size=24">wise</a><br>
-          <a href="https://www.lhv.ee/et/toopakkumised">lhv</a><br>
-          <a href="https://jobs.bigbank.eu/et/toopakkumised/">bigbank</a><br>
-          <a
-            href="https://cv.ee/et/search?limit=20&offset=0&categories%5B0%5D=INFORMATION_TECHNOLOGY&towns%5B0%5D=312&fuzzy=true&searchId=54768f44-4314-46b1-9dbd-4742877d317c&sorting=LATEST">cv
-            online</a><br>
-          <a
-            href="https://www.cvkeskus.ee/toopakkumised?op=search&search%5Bjob_salary%5D=3&ga_track=newest&search%5Blocations%5D%5B%5D=3&search%5Bcategories%5D%5B%5D=8&search%5Bkeyword%5D=">cv
-            keskus</a><br>
-        </td>
+      <!-- Social Networks -->
+      <div class="category-card">
+        <div class="category-header">
+          <h3 class="category-title">
+            <span class="category-icon">🌐</span>
+            Sotsiaalvõrgud
+          </h3>
+          <button class="collapse-btn" aria-label="Toggle category">−</button>
+        </div>
+        <div class="bookmark-list">
+          <a href="https://www.geni.com/" class="bookmark-link" target="_blank" rel="noopener">geni</a>
+          <a href="https://twitter.com/" class="bookmark-link" target="_blank" rel="noopener">twitter</a>
+          <a href="https://www.youtube.com/" class="bookmark-link" target="_blank" rel="noopener">youtube</a>
+          <a href="https://www.facebook.com/" class="bookmark-link" target="_blank" rel="noopener">facebook</a>
+        </div>
+      </div>
 
-        <td style="vertical-align: top; width: 33%;">
-          <h3>linux</h3>
-          <a href="http://www.ubuntu.com/">ubuntu</a><br>
-          <a href="http://slashdot.org/">slashdot</a><br>
-          <a href="http://www.distrowatch.com/">distrowatch</a><br>
-        </td>
+      <!-- Housing Association -->
+      <div class="category-card">
+        <div class="category-header">
+          <h3 class="category-title">
+            <span class="category-icon">🏢</span>
+            Ühistu
+          </h3>
+          <button class="collapse-btn" aria-label="Toggle category">−</button>
+        </div>
+        <div class="bookmark-list">
+          <a href="https://rakendus.korteriyhistu.net/index.php?screen=sisenemine.sisenemine" class="bookmark-link" target="_blank" rel="noopener">korteriyhistu.net</a>
+          <a href="https://klient.tallinnavesi.ee/Authentication/LogOn?logOff=True" class="bookmark-link" target="_blank" rel="noopener">tallinna vesi</a>
+          <a href="https://ettevotjaportaal.rik.ee" class="bookmark-link" target="_blank" rel="noopener">ettevõtjaportaal</a>
+        </div>
+      </div>
 
-        <td style="vertical-align: top; width: 34%;">
-          <h3>ilm</h3>
-          <a href="http://www.ilm.ee/">ilm</a><br>
-          <a href="http://www.emhi.ee/?ide=19">emhi</a><br>
-          <a href="http://www.yr.no/en">yr.no</a><br>
-        </td>
-      </tr>
+      <!-- Work -->
+      <div class="category-card">
+        <div class="category-header">
+          <h3 class="category-title">
+            <span class="category-icon">💼</span>
+            Töö
+          </h3>
+          <button class="collapse-btn" aria-label="Toggle category">−</button>
+        </div>
+        <div class="bookmark-list">
+          <a href="https://riigihanked.riik.ee/rhr-web/#/" class="bookmark-link" target="_blank" rel="noopener">riigihanked</a>
+          <a href="https://www.checkout.com/careers/?location=Tallinn" class="bookmark-link" target="_blank" rel="noopener">checkout.com</a>
+          <a href="https://wise.jobs/jobs?options=300&page=1&size=24" class="bookmark-link" target="_blank" rel="noopener">wise</a>
+          <a href="https://www.lhv.ee/et/toopakkumised" class="bookmark-link" target="_blank" rel="noopener">lhv</a>
+          <a href="https://jobs.bigbank.eu/et/toopakkumised/" class="bookmark-link" target="_blank" rel="noopener">bigbank</a>
+          <a href="https://cv.ee/et/search?limit=20&offset=0&categories%5B0%5D=INFORMATION_TECHNOLOGY&towns%5B0%5D=312&fuzzy=true&searchId=54768f44-4314-46b1-9dbd-4742877d317c&sorting=LATEST" class="bookmark-link" target="_blank" rel="noopener">cv online</a>
+          <a href="https://www.cvkeskus.ee/toopakkumised?op=search&search%5Bjob_salary%5D=3&ga_track=newest&search%5Blocations%5D%5B%5D=3&search%5Bcategories%5D%5B%5D=8&search%5Bkeyword%5D=" class="bookmark-link" target="_blank" rel="noopener">cv keskus</a>
+        </div>
+      </div>
 
-      <tr>
-        <td style="vertical-align: top; width: 33%;">
-          <h3>blog, docs</h3>
-          <a href="https://blog.jaaknt.eu/blog/ghost">blogi</a><br>
-          <a href="https://preeminent-haupia-05bcac.netlify.app">uus blogi</a><br>
-          <a
-            href="https://docs.google.com/spreadsheets/d/15bOgGxHtWvcsIpDgCgJt_Mlb6KuYdswIKDFAKkQz5fc/edit">puhkus</a><br>
-          <a
-            href="https://docs.google.com/spreadsheets/d/1fhBljXd9wZy2e1wOBzmTiBMr_3hzhtGikeSQHyL-de8/edit?pli=1#gid=0">portfolio</a><br>
-          <a href="https://docs.google.com/spreadsheets/d/1pRIT7i51OKFrtjfOb6VwMWGxFf6usWyrSYLaewg4wWc/edit#gid=0">auto
-            2023</a><br>
-          <a
-            href="https://docs.google.com/spreadsheets/d/1e0zTplFNowv7eGuyS3vp0oWKII0T9FM_J4DGK_6NCYY/edit#gid=0">remont</a><br>
-          <a
-            href="https://docs.google.com/spreadsheets/d/1tGV_tiCbf1t1JxyKgBvm6RUlMw6lYXh3uJn-mxB4ZNA/edit#gid=0">arved</a><br>
-        </td>
+      <!-- Linux -->
+      <div class="category-card">
+        <div class="category-header">
+          <h3 class="category-title">
+            <span class="category-icon">🐧</span>
+            Linux
+          </h3>
+          <button class="collapse-btn" aria-label="Toggle category">−</button>
+        </div>
+        <div class="bookmark-list">
+          <a href="https://www.ubuntu.com/" class="bookmark-link" target="_blank" rel="noopener">ubuntu</a>
+          <a href="https://slashdot.org/" class="bookmark-link" target="_blank" rel="noopener">slashdot</a>
+          <a href="https://www.distrowatch.com/" class="bookmark-link" target="_blank" rel="noopener">distrowatch</a>
+        </div>
+      </div>
 
-        <td style="vertical-align: top; width: 33%;">
-          <h3>java</h3>
-          <a href="http://www.apache.org/">apache</a><br>
-          <a href="https://spring.io/projects/spring-boot">spring boot</a><br>
-          <a href="https://github.com/trending">github trending</a><br>
-          <a href="https://gradle.org/releases">gradle</a><br>
-          <a href="https://github.com/apache/kafka">kafka</a><br>
-          <a href="http://www.scala-lang.org/">scala</a><br>
-        </td>
+      <!-- Weather -->
+      <div class="category-card">
+        <div class="category-header">
+          <h3 class="category-title">
+            <span class="category-icon">🌤️</span>
+            Ilm
+          </h3>
+          <button class="collapse-btn" aria-label="Toggle category">−</button>
+        </div>
+        <div class="bookmark-list">
+          <a href="https://www.ilm.ee/" class="bookmark-link" target="_blank" rel="noopener">ilm</a>
+          <a href="https://www.emhi.ee/?ide=19" class="bookmark-link" target="_blank" rel="noopener">emhi</a>
+          <a href="https://www.yr.no/en" class="bookmark-link" target="_blank" rel="noopener">yr.no</a>
+        </div>
+      </div>
 
-        <td style="vertical-align: top; width: 34%;">
-          <h3>ai</h3>
-          <a href="https://chatgpt.com">chatgpt</a><br>
-          <a href="https://gemini.google.com/app">gemini</a><br>
-          <a href="https://claude.ai">claude</a><br>
-          <a href="https://grok.com/">grok 3</a><br>
-          <a href="https://www.perplexity.ai/">perplexity.ai</a><br>
-          <a href="https://notebooklm.google.com/">notebooklm</a><br>
-          <a href="https://artificialanalysis.ai/">ai analysis</a><br>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+      <!-- Blog & Docs -->
+      <div class="category-card">
+        <div class="category-header">
+          <h3 class="category-title">
+            <span class="category-icon">📝</span>
+            Blog, docs
+          </h3>
+          <button class="collapse-btn" aria-label="Toggle category">−</button>
+        </div>
+        <div class="bookmark-list">
+          <a href="https://blog.jaaknt.eu/blog/ghost" class="bookmark-link" target="_blank" rel="noopener">blogi</a>
+          <a href="https://preeminent-haupia-05bcac.netlify.app" class="bookmark-link" target="_blank" rel="noopener">uus blogi</a>
+          <a href="https://docs.google.com/spreadsheets/d/15bOgGxHtWvcsIpDgCgJt_Mlb6KuYdswIKDFAKkQz5fc/edit" class="bookmark-link" target="_blank" rel="noopener">puhkus</a>
+          <a href="https://docs.google.com/spreadsheets/d/1fhBljXd9wZy2e1wOBzmTiBMr_3hzhtGikeSQHyL-de8/edit?pli=1#gid=0" class="bookmark-link" target="_blank" rel="noopener">portfolio</a>
+          <a href="https://docs.google.com/spreadsheets/d/1pRIT7i51OKFrtjfOb6VwMWGxFf6usWyrSYLaewg4wWc/edit#gid=0" class="bookmark-link" target="_blank" rel="noopener">auto 2023</a>
+          <a href="https://docs.google.com/spreadsheets/d/1e0zTplFNowv7eGuyS3vp0oWKII0T9FM_J4DGK_6NCYY/edit#gid=0" class="bookmark-link" target="_blank" rel="noopener">remont</a>
+          <a href="https://docs.google.com/spreadsheets/d/1tGV_tiCbf1t1JxyKgBvm6RUlMw6lYXh3uJn-mxB4ZNA/edit#gid=0" class="bookmark-link" target="_blank" rel="noopener">arved</a>
+        </div>
+      </div>
 
+      <!-- Java -->
+      <div class="category-card">
+        <div class="category-header">
+          <h3 class="category-title">
+            <span class="category-icon">☕</span>
+            Java
+          </h3>
+          <button class="collapse-btn" aria-label="Toggle category">−</button>
+        </div>
+        <div class="bookmark-list">
+          <a href="https://www.apache.org/" class="bookmark-link" target="_blank" rel="noopener">apache</a>
+          <a href="https://spring.io/projects/spring-boot" class="bookmark-link" target="_blank" rel="noopener">spring boot</a>
+          <a href="https://github.com/trending" class="bookmark-link" target="_blank" rel="noopener">github trending</a>
+          <a href="https://gradle.org/releases" class="bookmark-link" target="_blank" rel="noopener">gradle</a>
+          <a href="https://github.com/apache/kafka" class="bookmark-link" target="_blank" rel="noopener">kafka</a>
+          <a href="https://www.scala-lang.org/" class="bookmark-link" target="_blank" rel="noopener">scala</a>
+        </div>
+      </div>
+
+      <!-- AI -->
+      <div class="category-card">
+        <div class="category-header">
+          <h3 class="category-title">
+            <span class="category-icon">🤖</span>
+            AI
+          </h3>
+          <button class="collapse-btn" aria-label="Toggle category">−</button>
+        </div>
+        <div class="bookmark-list">
+          <a href="https://chatgpt.com" class="bookmark-link" target="_blank" rel="noopener">chatgpt</a>
+          <a href="https://gemini.google.com/app" class="bookmark-link" target="_blank" rel="noopener">gemini</a>
+          <a href="https://claude.ai" class="bookmark-link" target="_blank" rel="noopener">claude</a>
+          <a href="https://grok.com/" class="bookmark-link" target="_blank" rel="noopener">grok 3</a>
+          <a href="https://www.perplexity.ai/" class="bookmark-link" target="_blank" rel="noopener">perplexity.ai</a>
+          <a href="https://notebooklm.google.com/" class="bookmark-link" target="_blank" rel="noopener">notebooklm</a>
+          <a href="https://artificialanalysis.ai/" class="bookmark-link" target="_blank" rel="noopener">ai analysis</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="assets/js/main.js"></script>
 </body>
 
 </html>

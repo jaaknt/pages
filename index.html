@@ -1,6 +1,89 @@
-<html>
-    <head></head>
-    <body>
-        <h1>Greetings from authors</h1> 
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Bookmarks - Home</title>
+    <meta name="description" content="Personal bookmark collection and homepage">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="logo">📚 Bookmarks</a>
+            
+            <div class="search-container">
+                <input 
+                    type="text" 
+                    class="search-input" 
+                    placeholder="Search bookmarks... (Ctrl+K)"
+                    aria-label="Search bookmarks"
+                >
+                <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m21 21-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                </svg>
+            </div>
+            
+            <nav class="nav">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="bookmark.html" class="nav-link">Bookmarks</a>
+                <a href="forex.html" class="nav-link">Trading</a>
+                <button class="theme-toggle" title="Toggle theme" aria-label="Toggle dark/light mode">🌙</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="welcome">
+            <h1>Welcome to Your Personal Bookmarks</h1>
+            <p>Quick access to your favorite websites and tools, organized and searchable.</p>
+            
+            <div class="welcome-links">
+                <a href="bookmark.html" class="welcome-link">
+                    <span>📑</span>
+                    General Bookmarks
+                </a>
+                <a href="forex.html" class="welcome-link">
+                    <span>📈</span>
+                    Trading & Investment
+                </a>
+            </div>
+        </div>
+
+        <div class="bookmark-grid">
+            <div class="category-card">
+                <div class="category-header">
+                    <h3 class="category-title">
+                        <span class="category-icon">🚀</span>
+                        Quick Links
+                    </h3>
+                </div>
+                <div class="bookmark-list">
+                    <a href="https://github.com/" class="bookmark-link" target="_blank" rel="noopener">GitHub</a>
+                    <a href="https://claude.ai" class="bookmark-link" target="_blank" rel="noopener">Claude AI</a>
+                    <a href="https://gmail.com" class="bookmark-link" target="_blank" rel="noopener">Gmail</a>
+                    <a href="https://google.com/calendar" class="bookmark-link" target="_blank" rel="noopener">Calendar</a>
+                </div>
+            </div>
+
+            <div class="category-card">
+                <div class="category-header">
+                    <h3 class="category-title">
+                        <span class="category-icon">ℹ️</span>
+                        About This Site
+                    </h3>
+                </div>
+                <div class="bookmark-list">
+                    <p style="color: var(--text-muted); font-size: 0.875rem; line-height: 1.5; margin: 0;">
+                        This is your personal bookmark management system. Use the search function to quickly find links, 
+                        or browse by category. Press <kbd style="background: var(--surface-color); padding: 0.125rem 0.25rem; border-radius: 0.25rem; font-size: 0.75rem;">Ctrl+K</kbd> to search anywhere.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="assets/js/main.js"></script>
+</body>
 </html>
