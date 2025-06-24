@@ -21,6 +21,53 @@ class BookmarkManager {
     this.searchInput = document.querySelector('.search-input');
     this.bookmarkCards = Array.from(document.querySelectorAll('.category-card'));
     this.bookmarkLinks = Array.from(document.querySelectorAll('.bookmark-link'));
+    this.setupTooltips();
+  }
+
+  // Setup URL tooltips for bookmark links
+  setupTooltips() {
+    // Setup tooltips for existing links
+    this.bookmarkLinks.forEach(link => {
+      this.addTooltipToLink(link);
+    });
+
+    // Use MutationObserver to handle dynamically added links
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        mutation.addedNodes.forEach((node) => {
+          if (node.nodeType === Node.ELEMENT_NODE) {
+            const newLinks = node.querySelectorAll ? node.querySelectorAll('.bookmark-link') : [];
+            newLinks.forEach(link => this.addTooltipToLink(link));
+            
+            if (node.classList && node.classList.contains('bookmark-link')) {
+              this.addTooltipToLink(node);
+            }
+          }
+        });
+      });
+    });
+
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
+  }
+
+  addTooltipToLink(link) {
+    if (!link.title && link.href) {
+      // Clean up the URL for better readability
+      let displayUrl = link.href;
+      
+      // Remove protocol for cleaner display
+      displayUrl = displayUrl.replace(/^https?:\/\//, '');
+      
+      // Limit length for very long URLs
+      if (displayUrl.length > 60) {
+        displayUrl = displayUrl.substring(0, 57) + '...';
+      }
+      
+      link.title = displayUrl;
+    }
   }
 
   // Theme Management
