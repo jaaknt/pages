@@ -71,7 +71,7 @@
   
   .bookmark-link {
     padding: 0.25rem 0.375rem;
-    font-size: 0.75rem;
+    font-size: 0.875rem;
   }
   
   .main {
@@ -133,7 +133,7 @@
   
   .bookmark-link {
     padding: 0.1875rem 0.25rem;
-    font-size: 0.6875rem;
+    font-size: 0.8125rem;
   }
   
   .main {
@@ -145,8 +145,7 @@
 @media print {
   .header,
   .search-container,
-  .theme-toggle,
-  .collapse-btn {
+  .theme-toggle {
     display: none !important;
   }
   
@@ -223,7 +222,6 @@
 .bookmark-link:focus,
 .nav-link:focus,
 .theme-toggle:focus,
-.collapse-btn:focus,
 .welcome-link:focus {
   outline: 2px solid var(--primary-color);
   outline-offset: 2px;

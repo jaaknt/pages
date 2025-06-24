@@ -11,7 +11,6 @@ class BookmarkManager {
   init() {
     this.setupTheme();
     this.setupSearch();
-    this.setupCollapse();
     this.setupKeyboardShortcuts();
     this.trackRecentlyUsed();
     this.initializeElements();
@@ -150,15 +149,6 @@ class BookmarkManager {
       // Show/hide entire category
       if (hasMatch || normalizedQuery === '') {
         card.classList.remove('hidden');
-        // Expand category if search matches
-        if (normalizedQuery && hasMatch) {
-          const bookmarkList = card.querySelector('.bookmark-list');
-          const collapseBtn = card.querySelector('.collapse-btn');
-          if (bookmarkList && bookmarkList.classList.contains('collapsed')) {
-            bookmarkList.classList.remove('collapsed');
-            if (collapseBtn) collapseBtn.textContent = '−';
-          }
-        }
       } else {
         card.classList.add('hidden');
       }
@@ -170,48 +160,6 @@ class BookmarkManager {
     }
   }
 
-  // Collapse/Expand Functionality
-  setupCollapse() {
-    document.addEventListener('click', (e) => {
-      if (e.target.classList.contains('collapse-btn')) {
-        const bookmarkList = e.target.closest('.category-card').querySelector('.bookmark-list');
-        const isCollapsed = bookmarkList.classList.contains('collapsed');
-        
-        bookmarkList.classList.toggle('collapsed');
-        e.target.textContent = isCollapsed ? '−' : '+';
-        
-        // Save state
-        const categoryTitle = e.target.closest('.category-card').querySelector('.category-title').textContent;
-        this.saveCollapseState(categoryTitle, !isCollapsed);
-      }
-    });
-
-    // Restore collapse states
-    this.restoreCollapseStates();
-  }
-
-  saveCollapseState(category, isCollapsed) {
-    const states = JSON.parse(localStorage.getItem('collapseStates') || '{}');
-    states[category] = isCollapsed;
-    localStorage.setItem('collapseStates', JSON.stringify(states));
-  }
-
-  restoreCollapseStates() {
-    const states = JSON.parse(localStorage.getItem('collapseStates') || '{}');
-    
-    Object.entries(states).forEach(([category, isCollapsed]) => {
-      const categoryCard = Array.from(document.querySelectorAll('.category-title'))
-        .find(title => title.textContent === category)?.closest('.category-card');
-      
-      if (categoryCard && isCollapsed) {
-        const bookmarkList = categoryCard.querySelector('.bookmark-list');
-        const collapseBtn = categoryCard.querySelector('.collapse-btn');
-        
-        if (bookmarkList) bookmarkList.classList.add('collapsed');
-        if (collapseBtn) collapseBtn.textContent = '+';
-      }
-    });
-  }
 
   // Keyboard Shortcuts
   setupKeyboardShortcuts() {
